@@ -1,0 +1,52 @@
+{% extends 'form.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block head_form %}
+    <script src="{% static 'company/js/list.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="card card-outline card-primary bg-gradient-white">
+        <div class="card-header">
+            <h5 class="card-title"><i class="fas fa-building"></i> <b>Compañía</b></h5>
+        </div>
+        <div class="card-body">
+
+            <form id="frmCompany" enctype="multipart/form-data" method="post">
+                <div class="align-items-center">
+
+                    {% csrf_token %}
+                    <!-- agregando elementos del formulario -->
+                    {% for fieldCat in frmCompany.visible_fields %}
+                        {% if fieldCat.name != 'image' %}
+                            <label for="email">{{ fieldCat.label }}</label>
+                            {{ fieldCat|add_class:'form-control'|attr:'autocomplete:off' }}
+                        {% else %}
+                            <hr>
+                            <label for="email">{{ fieldCat.label }}</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    {{ fieldCat }}
+                                    <!--<input type="file" class="custom-file-input" id="inputGroupFile04"
+                                           aria-describedby="inputGroupFileAddon04">-->
+                                    <label class="custom-file-label" for="inputGroupFile04">Seleccionar archivo</label>
+                                </div>
+                            </div>
+
+                        {% endif %}
+                    {% endfor %}
+                    <div align="center">
+                        <img id="imageSelected" src="/media/company/2020/11/30/1android-n-n.jpg"
+                             class=" img-thumbnail m-1"
+                             style="width: 200px;height: 200px;" alt="...">
+                    </div>
+                    <hr>
+                    <button type="submit" name="frmCompany" class="btn btn-primary btn-flat btn-block">
+                        <i class="fas fa-edit"></i> Modificar datos de Compañía
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

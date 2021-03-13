@@ -1,0 +1,113 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'sale/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <th scope="col">Nro</th>
+        <th scope="col">Cliente | DNI</th>
+        <th scope="col">Fecha de registro</th>
+        <th scope="col">Subtotal</th>
+        <th scope="col">Iva</th>
+        <th scope="col">Total</th>
+        <th scope="col">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+    <div class="modal fade" id="myModelDet" data-backdrop="static" data-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-shopping-cart"></i> Detalle de
+                        factura </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="invoice p-3 mb-3">
+                        <div class="row">
+                            <!-- /.col -->
+                            <div class="col-12">
+                                <h4>
+                                    <i class="fas fa-globe"></i> Bervis.
+                                    <small class="float-right" id="date"></small>
+                                </h4>
+                            </div>
+                        </div>
+                        <!-- info cliente -->
+                        <div class="row invoice-info">
+                            <div class="col-sm-7 invoice-col">
+                                <strong id="client_name"></strong><br>
+                                <p id="client_dni"></p><br>
+                            </div>
+                            <!-- info factura -->
+                            <div class="col-sm-2 invoice-col">
+                                <b id="invoice_number"></b><br>
+                            </div>
+                            <!-- boton PDF -->
+                            <div class="col-sm-3 invoice-col" id="buttonPDF">
+
+                            </div>
+                        </div>
+
+                        <!-- Table row -->
+                        <div class="row">
+                            <div class="col-12 table-responsive">
+                                <hr>
+                                <table class="table table-striped" id="tblDet">
+                                    <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>PVP</th>
+                                        <th>Cantidad</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tblDetBody">
+                                    </tbody>
+                                </table>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- accepted payments column -->
+                            <div class="col-6">
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-6">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                        <tr>
+                                            <th style="width:50%">Subtotal:</th>
+                                            <td id="subtotal"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>IVA</th>
+                                            <td id="iva"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total:</th>
+                                            <td id="total"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
