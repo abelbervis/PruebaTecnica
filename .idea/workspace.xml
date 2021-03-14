@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="104c47fb-9a3b-4505-bf2f-1e8f89a9894d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/client/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/client/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/product/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/product/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/sale/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/sale/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/templates/client/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/client/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/product/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/templates/sale/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/sale/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/templates/sale/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/sale/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/views/sale/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/sale/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/views/tests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/tests/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/templates/login/changepwd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/templates/login/resetpwd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/templates/login/send_email.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/user/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/user/templates/user/change_password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vtc/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vtc/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +115,7 @@
       <workItem from="1615565311567" duration="9097000" />
       <workItem from="1615597609447" duration="22580000" />
       <workItem from="1615650061131" duration="10545000" />
-      <workItem from="1615671758667" duration="13112000" />
+      <workItem from="1615671758667" duration="14230000" />
     </task>
     <servers />
   </component>

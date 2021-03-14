@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'dbbackup',  # django-dbbackup
     # Apps
     'core.erp',
-    'core.homepage',
+    #'core.homepage',
     'core.login',
     'core.user',
 ]
