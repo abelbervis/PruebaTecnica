@@ -94,9 +94,7 @@
                                     <tr>
                                         <th>Eliminar</th>
                                         <th>Producto</th>
-                                        <!--<th>Categoría</th>-->
-                                        <th>Costo</th>
-                                        <th>PVP</th>
+                                        <th>Precio</th>
                                         <th>Cantidad</th>
                                         <th>Subtotal</th>
                                         <th>Impuesto</th>
@@ -229,6 +227,7 @@
 
 
     <script>
+        //lleno el arreglo con lo que envia en la vista
         vents.items.products = {{ det|safe }};
         vents.list();
     </script>

@@ -21,7 +21,8 @@ var vents = {
         $.each(this.items.products, function (pos, dict) {
             dict.pos = pos;
             //dict.pvp = parseFloat(dict.cost)+parseFloat(dict.cost)*pvp_ganancia;
-            dict.pvp = dict.pvp;
+            /* -------------------------------------------------------------------------*/
+            //dict.pvp = dict.price;
             dict.subtotal = dict.cant * parseFloat(dict.pvp);
             dict.impuesto = dict.subtotal * iva;
             dict.total = dict.subtotal+dict.impuesto;
@@ -53,7 +54,6 @@ var vents = {
         //unshift agrega los elementos al inicio
         this.items.products.unshift(item);
         this.list();
-        console.log(vents.items.products);
 
     },
     list: function () {
@@ -70,7 +70,6 @@ var vents = {
                 {"data": "id"},
                 // diccionario de producto
                 {"data": {"data": "name", "data":"image"}},
-                {"data": "cost"},
                 {"data": "pvp"},
                 {"data": "cant"},
                 {"data": "subtotal"},
@@ -111,7 +110,8 @@ var vents = {
                     width: '100px',
                     orderable: false,
                     render: function (data, type, row) {
-                        return '<input type="text" name="pvp" class="form-control form-control-sm input-sm"  autocomplete="off" value="' + row.pvp + '">';
+                        //return '<input type="text" name="pvp" class="form-control form-control-sm input-sm"  autocomplete="off" value="' + row.pvp + '">';
+                        return '$' + parseFloat(row.pvp).toFixed(2);
                     }
                 },
                 {
@@ -123,7 +123,7 @@ var vents = {
                     }
                 },
                 {
-                    targets: [-7],
+                    targets: [-6],
                     class: 'text-center',
                     orderable: false,
                     render: function (data, type, row) {
@@ -150,13 +150,14 @@ var vents = {
                     max: 1000000000,
                     step: 1
                 });
+                /*
                 $(row).find('input[name="pvp"]').TouchSpin({
 
                     //min: parseFloat(data.cost)+parseFloat(data.cost)*pvp_ganancia,//no se puede bajar de la ganancia
-                    min: data.pvp,
+                    min: data.price,
                     max: 1000000000,
                     step: 1,
-                });
+                });*/
 
             },
             initComplete: function (settings, json) {
@@ -328,15 +329,16 @@ $(function () {
             $('td:eq(6)', tblProducts.row(tr.row).node()).html('$' + vents.items.products[tr.row].impuesto.toFixed(2));
             $('td:eq(7)', tblProducts.row(tr.row).node()).html('$' + vents.items.products[tr.row].total.toFixed(2));
         })
+        /*
         .on('change', 'input[name="pvp"]', function () {
             var price = parseFloat($(this).val());
             var tr = tblProducts.cell($(this).closest('td, li')).index();
-            vents.items.products[tr.row].pvp = price;
+            vents.items.products[tr.row].price = price;
             vents.calculate_invoice();
             $('td:eq(5)', tblProducts.row(tr.row).node()).html('$' + vents.items.products[tr.row].subtotal.toFixed(2));
             $('td:eq(6)', tblProducts.row(tr.row).node()).html('$' + vents.items.products[tr.row].impuesto.toFixed(2));
             $('td:eq(7)', tblProducts.row(tr.row).node()).html('$' + vents.items.products[tr.row].total.toFixed(2));
-        })
+        })*/
     ;
 
 

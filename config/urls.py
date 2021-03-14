@@ -22,9 +22,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', IndexView.as_view(), name='index'),
+    path('', LoginFormView.as_view(), name='index'),
     path('login/', include('core.login.urls')),
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('erp/', include('core.erp.urls')),
     path('user/', include('core.user.urls')),
 ]

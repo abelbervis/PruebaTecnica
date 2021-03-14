@@ -46,8 +46,6 @@ INSTALLED_APPS = [
     'core.login',
     'core.user',
 ]
-DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
-DBBACKUP_STORAGE_OPTIONS = {'location': os.path.join(BASE_DIR, 'backups')}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

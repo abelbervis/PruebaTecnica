@@ -109,23 +109,6 @@ class ClientForm(ModelForm):
     #         # self.add_error('name', 'Le faltan caracteres')
     #     return cleaned
 
-class TestForm(Form):
-
-    products = ModelChoiceField(queryset=Product.objects.none(), widget=Select(attrs={
-        'class': 'form-control select2',
-        'style': 'width: 100%'
-    }))
-
-    # search = CharField(widget=TextInput(attrs={
-    #     'class': 'form-control',
-    #     'placeholder': 'Ingrese una descripción'
-    # }))
-
-    search = ModelChoiceField(queryset=Product.objects.none(), widget=Select(attrs={
-        'class': 'form-control select2',
-        'style': 'width: 100%'
-    }))
-
 class SaleForm(ModelForm):
     def __init__(self, *args, **kwargs):
          super().__init__(*args, **kwargs)

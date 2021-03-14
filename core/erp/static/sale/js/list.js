@@ -67,13 +67,6 @@ var mytable = {
                 dataSrc: ""
             },
             columns: [
-                /*{
-                    "className": 'details-control',
-                    "orderable": false,
-                    "data": null,
-                    "defaultContent": ''
-                },*/
-                {"data": "id"},
                 {"data": "cli"},
                 {"data": "date_joined"},
                 {"data": "subtotal"},

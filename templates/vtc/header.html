@@ -31,23 +31,10 @@
                         Sú último acceso fue {{ request.user.last_login }}
                     </span>
                 <div class="dropdown-divider"></div>
-                <a href="{% url  'user:user_profile' %}" class="dropdown-item">
-                    <i class="fas fa-edit mr-2"></i> Editar perfil
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="{% url 'user:user_change_password' %}" class="dropdown-item">
-                    <i class="fas fa-lock mr-2"></i> Editar password
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">
-                    <p>Este sistema te permitira realizar diferentes actividades</p>
+                <a href="{% url  'logout' %}" class="dropdown-item">
+                    <i class="fas fa-edit mr-2"></i> Cerrar sesion
                 </a>
             </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'logout' %}">
-                <i class="fas fa-power-off" aria-hidden="true"></i>
-            </a>
         </li>
     </ul>
 </nav>

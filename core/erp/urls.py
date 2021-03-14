@@ -20,8 +20,6 @@ urlpatterns = [
     path('product/delete/<int:pk>/', ProductDeleteView.as_view(), name='product_delete'),
     # home
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
-    # test
-    path('test/', TestView.as_view(), name='test'),
     # sale
     path('sale/list/', SaleListView.as_view(), name='sale_list'),
     path('sale/add/', SaleCreateView.as_view(), name='sale_create'),

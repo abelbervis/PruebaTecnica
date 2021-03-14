@@ -40,7 +40,6 @@ var mytable = {
                 dataSrc: ""
             },
             columns: [
-                {"data": "id"},
                 {"data": "name"},
                 {"data": "description"},
                 {"data": "image"},

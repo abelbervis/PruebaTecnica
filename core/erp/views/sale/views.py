@@ -257,6 +257,7 @@ class SaleUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Update
             for i in DetSale.objects.filter(sale_id=self.get_object().id):
                 item = i.prod.toJSON()
                 item['cant'] = i.cant
+                item['price'] = format(i.price, '.2f')
                 data.append(item)
         except:
             pass
