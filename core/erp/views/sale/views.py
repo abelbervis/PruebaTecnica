@@ -116,7 +116,7 @@ class SaleCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Create
             print(request.POST)
             if action == 'search_products':
                 data = []
-                prods = Product.objects.filter(Q(name__icontains=request.POST['term']))[0:10]
+                prods = Product.objects.filter(Q(Q(name__icontains=request.POST['term'])|Q(code__icontains=request.POST['term'])) & Q(active__contains=0))[0:10]
                 for i in prods:
                     item = i.toJSON()
                     #item['value'] = i.name
@@ -200,7 +200,7 @@ class SaleUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Update
             action = request.POST['action']
             if action == 'search_products':
                 data = []
-                prods = Product.objects.filter(Q(name__icontains=request.POST['term']))[0:10]
+                prods = Product.objects.filter(Q(Q(name__icontains=request.POST['term'])|Q(code__icontains=request.POST['term'])) & Q(active__contains=0))[0:10]
                 for i in prods:
                     item = i.toJSON()
                     item['value'] = i.name

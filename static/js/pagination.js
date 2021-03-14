@@ -77,6 +77,7 @@ var pagination = {
                         str--;
                         // se llena la tabla con los registros desde el valor inicial de la pagina
                         // hasta el valor final de la pagina
+
                         mytable.list('searchdatapagination', str, end);
                     }
                 }).on('page', function (event, page) {
@@ -100,6 +101,8 @@ function Search() {
         pagination.items.search = inputSearch;
         pagination.create(pagination.items.rows_number, 'getcount');
         $('input[name="total_rows_count"]').val(pagination.items.count);
+    }else{
+        alert("no hay datos para buscar");
     }
     $('#id_srch').focus();
     $('#id_srch').select();

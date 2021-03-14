@@ -20,6 +20,11 @@ class ProductForm(ModelForm):
                     'placeholder': 'Ingrese un nombre',
                 }
             ),
+            'description': TextInput(
+                attrs={
+                    'placeholder': 'Ingrese una descripcion',
+                }
+            ),
 
         }
 

@@ -1,3 +1,4 @@
+import uuid
 from datetime import datetime
 
 from django.db import models
@@ -14,8 +15,8 @@ ACTIVE_CHOICES = [
 ]
 
 class Product(models.Model):
+    code = models.UUIDField(primary_key=False,default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=150, verbose_name='Nombre', unique=True)
-    image = models.ImageField(upload_to='product/%Y/%m/%d', null=True, blank=True, verbose_name='Imagen')
     #descripcion
     description = models.CharField(max_length=300, verbose_name='Descripcion')
     #costo
@@ -29,15 +30,16 @@ class Product(models.Model):
 
     def toJSON(self):
         item = model_to_dict(self)
-        item['image'] = self.get_image()
+        #item['image'] = self.get_image()
+        item['code'] = self.code
         item['pvp'] = format(self.pvp, '.2f')
         item['cost'] = format(self.cost, '.2f')
         return item
 
-    def get_image(self):
-        if self.image:
-            return '{}{}'.format(MEDIA_URL, self.image)
-        return '{}{}'.format(STATIC_URL, 'img/empty.png')
+    #def get_image(self):
+    #    if self.image:
+    #        return '{}{}'.format(MEDIA_URL, self.image)
+    #   return '{}{}'.format(STATIC_URL, 'img/empty.png')
 
     class Meta:
         verbose_name = 'Producto'
@@ -70,7 +72,7 @@ class Client(models.Model):
 
 
 class Sale(models.Model):
-    cli = models.ForeignKey(Client, on_delete=models.CASCADE)
+    cli = models.ForeignKey(Client, on_delete=models.PROTECT)
     date_joined = models.DateField(default=datetime.now)
     subtotal = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
     iva = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
@@ -97,7 +99,7 @@ class Sale(models.Model):
 
 class DetSale(models.Model):
     sale = models.ForeignKey(Sale, on_delete=models.CASCADE)
-    prod = models.ForeignKey(Product, on_delete=models.CASCADE)
+    prod = models.ForeignKey(Product, on_delete=models.PROTECT)
     price = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
     cant = models.IntegerField(default=0)
     subtotal = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)

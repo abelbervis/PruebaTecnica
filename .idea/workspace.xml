@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="104c47fb-9a3b-4505-bf2f-1e8f89a9894d" name="Default Changelist" comment="">
+    <list default="true" id="104c47fb-9a3b-4505-bf2f-1e8f89a9894d" name="Default Changelist" comment="elimine homepage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/static/product/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/product/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/templates/company/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/templates/sale/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/sale/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/views/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/views/sale/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/sale/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/pagination.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +125,17 @@
       <workItem from="1615565311567" duration="9097000" />
       <workItem from="1615597609447" duration="22580000" />
       <workItem from="1615650061131" duration="10545000" />
-      <workItem from="1615671758667" duration="14230000" />
+      <workItem from="1615671758667" duration="18345000" />
+      <workItem from="1615733406198" duration="20597000" />
     </task>
+    <task id="LOCAL-00001" summary="elimine homepage">
+      <created>1615701400077</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615701400077</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,5 +157,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="elimine homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="elimine homepage" />
   </component>
 </project>

@@ -27,13 +27,15 @@ class ProductListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListV
         try:
             action = request.POST['action']
             if action == 'getcount':
+                #El action get_count  nos permite sacar el total de registros de una tabla
+                #que coinciden con la busqueda
                 if request.POST['search'] == "":
                     # si no es una busqueda entonces retornar total de elementos de la tabla
                     data['count'] = str(Product.objects.count())
                 else:
                     # sino que devuelva el total de elementos que tiene la consulta
                     search = request.POST['search']
-                    p= Product.objects.filter(Q(name__icontains=search))
+                    p= Product.objects.filter(Q(name__icontains=search)| Q(code__icontains=search))
                     data['count'] = str(p.count())
             elif action == 'searchdatapagination':
                 data = []
@@ -45,9 +47,14 @@ class ProductListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListV
                     for i in Product.objects.all()[start_page:end_page]:
                         data.append(i.toJSON())
                 else:
+                    print("lo que se busca:")
+                    print(search)
+                    print("paginas: startpage: "+str(start_page)+" endpage:"+str(end_page))
                     # devuelva un json con datos de la busqueda
-                    for i in Product.objects.filter(Q(name__icontains=search))[start_page:end_page]:
+                    for i in Product.objects.filter(Q(name__icontains=search)|Q(code__icontains=search))[start_page:end_page]:
                         data.append(i.toJSON())
+                    print("resultado de busqueda de producto")
+                    print(data)
             else:
                 data['error'] = 'Ha ocurrido un error'
         except Exception as e:

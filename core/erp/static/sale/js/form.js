@@ -168,40 +168,32 @@ var vents = {
 };
 
 // formatos select
-function formatRepo(repo) {
-    if (repo.loading) {
-        return repo.text;
+function formatoSelectProduct(item) {
+    if (item.loading) {
+        return item.item;
     }
 
     var option = $(
         '<div class="wrapper container">' +
-        '<div class="row">' +
-        '<div class="col-lg-1">' +
-        '<img src="' + repo.image + '" class="img-fluid img-thumbnail d-block mx-auto rounded">' +
-        '</div>' +
-        '<div class="col-lg-11 text-left shadow-sm">' +
-        //'<br>' +
-        '<p style="margin-bottom: 0;">' +
-        '<b>Nombre:</b> ' + repo.name + '<br>' +
-        '<b>Descripcion:</b> ' + repo.description + '<br>' +
-        '<b>Costo:</b> <span class="badge badge-warning">$' + repo.cost+ '</span>' +
-        '</p>' +
-        '</div>' +
-        '</div>' +
+
+        '<b>Nombre:</b> ' + item.name + '<br>' +
+        '<b>Descripcion:</b> ' + item.description + '<br>' +
+        '<b>Precio:</b> <span class="badge badge-warning">$' + item.pvp + '</span>' +
+
         '</div>');
 
     return option;
 }
-function formatRepoCli(repo) {
-    if (repo.loading) {
-        return repo.text;
+function formatoSelectClient(item) {
+    if (item.loading) {
+        return item.text;
     }
 
     var option = $(
         '<div class="wrapper container">' +
 
-        '<b>Nombres:</b> ' + repo.names + ' | <b>Apellidos:</b> ' + repo.surnames + ' | ' +
-        '<b>Dni:</b> ' + repo.dni + '<br>' +
+        '<b>Nombres:</b> ' + item.names + ' | <b>Apellidos:</b> ' + item.surnames + ' | ' +
+        '<b>Dni:</b> ' + item.dni + '<br>' +
 
         '</div>');
 
@@ -288,9 +280,9 @@ $(function () {
                 };
             },
         },
-        placeholder: 'Ingrese un producto',
+        placeholder: 'Ingrese el codigo o nombre del producto',
         minimumInputLength: 1,
-        templateResult: formatRepo,
+        templateResult: formatoSelectProduct,
     }).on('select2:select', function (e) {
         // evento cuando se selecciona un elemento
         // recuperando la data del select
@@ -436,9 +428,9 @@ $(function () {
                 };
             },
         },
-        placeholder: 'Seleccionar cliente',
+        placeholder: 'Ingrese el nombre, apellido o dni',
         minimumInputLength: 1,
-        templateResult: formatRepoCli,
+        templateResult: formatoSelectClient,
     });
 
     $(document).ready(function () {
