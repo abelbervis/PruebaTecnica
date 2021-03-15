@@ -127,17 +127,7 @@ var vents = {
                     class: 'text-center',
                     orderable: false,
                     render: function (data, type, row) {
-                        //<img src="'+data.image+'" alt="Product 1" class="img-circle img-size-32 mr-2">
-                        var itemP =
-                            '<div class="row m-0" style="border-left: 1px lightgray solid;border-right: 1px lightgray solid">' +
-                            '<div class="col-lg-5" ;align-items: center">' +
-                            '<img src="' + data.image + '" class="img-size-32 bg-light">' +
-                            '</div>' +
-                            '<div class="text-left col-lg-7" style="margin: 0px;">' +
-                            '<p class="text-primary" style="margin: 0px;">' + data.name + '</p>'+
-                            '</div>' +
-                            '</div>';
-                        return itemP;
+                        return data.name;
                     }
                 },
             ],
