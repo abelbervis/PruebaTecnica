@@ -258,6 +258,7 @@ class SaleUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Update
                 item = i.prod.toJSON()
                 item['cant'] = i.cant
                 item['price'] = format(i.price, '.2f')
+                item['code'] = ''#el codigo no se usa
                 data.append(item)
         except:
             pass

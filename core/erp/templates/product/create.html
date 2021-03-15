@@ -9,11 +9,7 @@
 {% endblock %}
 
 {% block form_fields %}
-    {% if action == 'add' %}
-                        <i class="fas fa-plus"></i>
-                    {% else %}
-                        <i class="fas fa-edit"></i>
-                    {% endif %}
+    
     {% for field in form.visible_fields %}
             <div class="form-group">
                 <label for="email">{{ field.label }}:</label>

@@ -3,7 +3,6 @@ from core.erp.views.client.views import *
 from core.erp.views.dashboard.views import *
 from core.erp.views.product.views import *
 from core.erp.views.sale.views import *
-from core.erp.views.tests.views import TestView
 
 app_name = 'erp'
 
